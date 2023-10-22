@@ -14,7 +14,7 @@ const NavbarComponent = () => {
     <>
        {['lg'].map((expand) => (
         <Navbar key={expand} expand={expand} className="bg-transparent fixed-top mb-3">
-          <Container >
+          <Container className=" ps-0" >
             <Navbar.Brand href="#"><div className="logo"></div></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
