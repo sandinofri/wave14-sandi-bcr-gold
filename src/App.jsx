@@ -3,6 +3,7 @@ import NavbarComponent from './component/NavbarComponent';
 import Header from './component/Header';
 import About from './component/About';
 import WhyUs from './component/WhyUs';
+import Testimonial from './component/Testimonial';
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
     <Header/>
     <About/>
     <WhyUs/>
+    <Testimonial/>
   
     </>
   );

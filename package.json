@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/sandinofri/wave14-sandi-bcr-gold",
+  "homepage": "https://github.com/sandinofri/23001028_14_San_bcr_gold",
   "name": "gold-challange",
   "private": true,
   "version": "0.0.0",
@@ -18,7 +18,8 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "swiper": "^10.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

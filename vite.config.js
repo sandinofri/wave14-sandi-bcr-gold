@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:"/wave14-sandi-bcr-gold/",
+  base:"/23001028_14_San_bcr_gold/",
   plugins: [react()],
   
 })
