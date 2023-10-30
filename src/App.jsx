@@ -6,6 +6,7 @@ import WhyUs from './component/WhyUs';
 import Testimonial from './component/Testimonial';
 import Banner from './component/Banner';
 import Faq from './component/Faq';
+import Footer from './component/Footer';
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
     <Testimonial/>
     <Banner/>
     <Faq/>
+    <Footer/>
   
     </>
   );
