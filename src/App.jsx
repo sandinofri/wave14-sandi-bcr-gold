@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import NavbarComponent from './component/NavbarComponent';
-import Header from './component/Header';
-import About from './component/About';
-import WhyUs from './component/WhyUs';
-import Testimonial from './component/Testimonial';
-import Banner from './component/Banner';
-import Faq from './component/Faq';
 import Footer from './component/Footer';
+import HomePage from './page/HomePage';
+import { Route, Routes } from 'react-router-dom';
+import SearchPage from './page/SearchPage';
 
 
 
@@ -18,12 +15,10 @@ const App = () => {
   return (
     <>
     <NavbarComponent/>
-    <Header/>
-    <About/>
-    <WhyUs/>
-    <Testimonial/>
-    <Banner/>
-    <Faq/>
+    <Routes>
+      <Route path='*' element={<HomePage/>}/>
+      <Route path='/searchPage' element={<SearchPage/>}/>
+    </Routes>
     <Footer/>
   
     </>

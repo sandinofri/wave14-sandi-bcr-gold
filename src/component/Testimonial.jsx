@@ -11,8 +11,11 @@ import { Pagination } from "swiper/modules";
 import TestiImg from "../assets/image/testi-img.png";
 import { FaStar } from "react-icons/fa";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { testi } from "../data/index";
 
 const Testimonial = () => {
+  const iconArray = Array(5).fill(<FaStar color="#F9CC00" />);
+
   return (
     <>
       <div className="testi" id="testi">
@@ -40,167 +43,23 @@ const Testimonial = () => {
                 },
               }}
             >
-              <SwiperSlide>
-                <div className="d-flex align-items-center pe-5">
-                  <img src={TestiImg} alt="" />
-                </div>
-                <div>
-                  <div className="star">
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
+              {testi.map((data) => (
+                <SwiperSlide>
+                  <div className="d-flex align-items-center pe-5">
+                    <img src={data.img} alt="" />
                   </div>
+                  <div>
+                    <div className="star">
+                      {iconArray.map((icon, index) => (
+                        <span key={index}>{icon}</span>
+                      ))}
+                    </div>
 
-                  <p className="text-start mt-1">
-                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod”
-                  </p>
-                  <small>John Dee 32, Bromo</small>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="d-flex align-items-center pe-5">
-                  <img src={TestiImg} alt="" />
-                </div>
-                <div>
-                  <div className="star">
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
+                    <p className="text-start mt-1">{data.desc}</p>
+                    <small>{data.name}</small>
                   </div>
-
-                  <p className="text-start mt-1">
-                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod”
-                  </p>
-                  <small>John Dee 32, Bromo</small>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="d-flex align-items-center pe-5">
-                  <img src={TestiImg} alt="" />
-                </div>
-                <div>
-                  <div className="star">
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                  </div>
-
-                  <p className="text-start mt-1">
-                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod”
-                  </p>
-                  <small>John Dee 32, Bromo</small>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="d-flex align-items-center pe-5">
-                  <img src={TestiImg} alt="" />
-                </div>
-                <div>
-                  <div className="star">
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                  </div>
-
-                  <p className="text-start mt-1">
-                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod”
-                  </p>
-                  <small>John Dee 32, Bromo</small>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="d-flex align-items-center pe-5">
-                  <img src={TestiImg} alt="" />
-                </div>
-                <div>
-                  <div className="star">
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                    <span>
-                      <FaStar color="#F9CC00" />
-                    </span>
-                  </div>
-
-                  <p className="text-start mt-1">
-                    “Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit, sed do eiusmod”
-                  </p>
-                  <small>John Dee 32, Bromo</small>
-                </div>
-              </SwiperSlide>
-             
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
           <div className="chevron">
