@@ -5,16 +5,20 @@ import WhyUs from '../component/WhyUs'
 import Testimonial from '../component/Testimonial'
 import Banner from '../component/Banner'
 import Faq from '../component/Faq'
+import  NavbarComponent from '../component/NavbarComponent'
+import Footer from '../component/Footer'
 
 const HomePage = () => {
   return (
     <>
-    <Header showButton={true}/>
+    <NavbarComponent/>
+    <Header showButton={true} showImage={true} showDesc={true}/>
     <About/>
     <WhyUs/>
     <Testimonial/>
     <Banner/>
     <Faq/>
+    <Footer/>
     
     </>
   )

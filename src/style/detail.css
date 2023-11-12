@@ -1,0 +1,86 @@
+.detail {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.detail .detail-left {
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--neutral-01, #fff);
+  /* Shadow/Low */
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.detail .detail-left p {
+  color: var(--neutral-01, #000);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.detail .detail-left ul li {
+  color: var(--neutral-03, #8a8a8a);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 175%;
+}
+
+.detail .accordion {
+  padding-left: 0 !important;
+}
+
+.detail .accordion-item {
+  border: none !important;
+}
+
+.detail .accordion-button {
+  color: var(--neutral-01, #000);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  padding-left: 0 !important;
+}
+
+.detail .detail-right {
+  height: 435px;
+  border-radius: 8px;
+  background: var(--neutral-01, #fff);
+  /* Shadow/Low */
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.detail .detail-right .gambar {
+  width: 290px;
+  margin: auto;
+}
+
+.detail .detail-right .gambar img {
+  width: 100%;
+}
+
+.detail .detail-right p {
+  color: var(--neutral-01, #000);
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 0 !important;
+}
+
+.detail .detail-right span {
+  color: var(--neutral-03, #8a8a8a);
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+}

@@ -8,6 +8,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Link } from "react-router-dom";
 
 const NavbarComponent = () => {
   return (
@@ -29,7 +30,7 @@ const NavbarComponent = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 link-container">
-                  <Nav.Link href="#about">Our Services</Nav.Link>
+                  <Link className="nav-link" href="#about" to={"/"}>Our Services</Link>
                   <Nav.Link href="#why">Why Us</Nav.Link>
                   <Nav.Link href="#testi">Testimonial</Nav.Link>
                   <Nav.Link href="#faq">FAQ</Nav.Link>
