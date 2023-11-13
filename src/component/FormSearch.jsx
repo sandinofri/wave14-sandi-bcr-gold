@@ -35,20 +35,20 @@ const FormSearch = ({setCarName,setCarCategory,setCarPrice,setCarStatus}) => {
   }
 
   function handlepriceChange(e){
-    const selectedValue = e.target.value;
+   setPrice(e.target.value)
 
   // Memproses nilai untuk rentang harga
-  if (selectedValue === "<400000") {
+  if (price === "<400000") {
     setCarPrice({
       minPrice: 0,
-      maxPrice: 200000
+      maxPrice: 400000
     });
-  } else if (selectedValue === "400000-600000") {
+  } else if (price === "400000-600000") {
     setCarPrice({
       minPrice: 400000,
       maxPrice: 600000
     });
-  } else if (selectedValue === ">600000") {
+  } else if (price === ">600000") {
     setCarPrice({
       minPrice: 600000,
       maxPrice: Infinity // Atau nilai maksimum yang sesuai
