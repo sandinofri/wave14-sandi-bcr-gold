@@ -2,17 +2,19 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../component/NavbarComponent";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import "../style/detail.css";
-import{FiUsers}from 'react-icons/fi'
+import { FiUsers } from "react-icons/fi";
+import DateInput from "../component/DateInput";
 
 const DetailPage = () => {
   const param = useParams();
   const [car, setCar] = useState({});
-  const [category,setCagory]=useState('')
+  const [category, setCagory] = useState("");
+  const[totalHari,setTotalHari] = useState(null)
 
   useEffect(() => {
     getDataById();
@@ -23,19 +25,22 @@ const DetailPage = () => {
       "https://api-car-rental.binaracademy.org/customer/car/" + param.id
     );
     setCar(res.data);
-    let categoryText = '';
-    if (res.data.category === 'large') {
-      categoryText = '6-8 orang';
-    }else if(res.data.category === 'medium'){
-      categoryText = '4-6 orang';
-    }else{
-      categoryText = '2-4 orang';
+    let categoryText = "";
+    if (res.data.category === "large") {
+      categoryText = "6-8 orang";
+    } else if (res.data.category === "medium") {
+      categoryText = "4-6 orang";
+    } else {
+      categoryText = "2-4 orang";
     }
 
     setCagory(categoryText);
   };
 
-  
+  const handleTotalDay = (day)=>{
+    setTotalHari(hari)
+  }
+
   return (
     <>
       <Navbar />
@@ -98,12 +103,18 @@ const DetailPage = () => {
             </div>
             <div className="mt-5 mb-5">
               <p>{car.name}</p>
-              <span className="me-2"><FiUsers width={12} color="#8A8A8A"/></span>
+              <span className="me-2">
+                <FiUsers width={12} color="#8A8A8A" />
+              </span>
               <span>{category}</span>
             </div>
+            <DateInput totalDay={handleTotalDay}/>
             <div className="d-flex justify-content-between">
               <p>Total</p>
               <p>{car.price}</p>
+            </div>
+            <div className="d-flex justify-content-center align-items-center">
+              <button className="button">lanjutkan pembayaran</button>
             </div>
           </Col>
         </Row>

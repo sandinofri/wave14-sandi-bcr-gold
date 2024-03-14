@@ -63,3 +63,9 @@ body.lock-scroll {
   border-radius: 2px;
   background: var(--primary-lime-green-04, #5cb85f);
 }
+
+@media (max-width: 700px) {
+  .container-form {
+    display: none;
+  }
+}

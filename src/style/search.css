@@ -1,5 +1,6 @@
 .car-container {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
   margin: auto;
@@ -65,4 +66,11 @@
   flex: 1 0 0;
   border-radius: 2px;
   background: var(--primary-lime-green-04, #5cb85f);
+}
+
+
+@media(max-width:700px){
+  .car-container .car {
+    align-items: center;
+  }
 }
